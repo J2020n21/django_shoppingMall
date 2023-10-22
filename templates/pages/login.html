@@ -1,0 +1,86 @@
+<!doctype html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+     <meta name="description" content="main-landing page" />
+     <meta name="author" content="" />
+     <title>A Company</title>
+     <!-- Favicon-->
+     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+     <!-- Core theme CSS (includes Bootstrap)-->
+     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <!-- components   -->
+<!--    <link rel="import" href="../components/navbar.html">-->
+ </head>
+
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+<!--navbar-->
+            {% include "../components/navbar.html" %}
+            <!-- Page content-->
+            <section class="py-5">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                        <div class="bg-dark mb-5" style="width:400px; height:100px; margin:auto;">
+                            <p style="color:white">LOGO</p>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- * * SB Forms Contact Form * *-->
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- This form is pre-integrated with SB Forms.-->
+                                <!-- To make this form functional, sign up at-->
+                                <!-- https://startbootstrap.com/solution/contact-forms-->
+                                <!-- to get an API token!-->
+                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                    <!--input pw-->
+                                    <div class="form-floating mb-3">
+                                        <label for="user-id">아이디</label>
+                                        <input class="form-control" id="user-id" type="text" placeholder="ID" data-sb-validations="required" />
+<!--                                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>-->
+                                    </div>
+                                    <!--input id-->
+                                    <div class="form-floating mb-3">
+                                        <label for="user-pw">비밀번호</label>
+                                        <input class="form-control" id="user-pw" type="password" placeholder="PASSWORD" data-sb-validations="required" />
+<!--                                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>-->
+                                    </div>
+
+                                    <!-- Submit success message-->
+                                    <!---->
+                                    <!-- This is what your users will see when the form-->
+                                    <!-- has successfully submitted-->
+                                    <div class="d-none" id="submitSuccessMessage">
+                                        <div class="text-center mb-3">
+                                            <div class="fw-bolder">Form submission successful!</div>
+                                            To activate this form, sign up at
+                                            <br />
+                                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                        </div>
+                                    </div>
+                                    <!-- Submit error message-->
+                                    <!---->
+                                    <!-- This is what your users will see when there is-->
+                                    <!-- an error submitting the form-->
+                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                    <!-- Submit Button-->
+                                    <div class="d-grid"><button style="width:400px; height:50px;" class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">로그인</button></div>
+                                    <p><a href="/signUp">회원가입</a>/아이디찾기/비밀번호찾기</p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+
+
+    </body>
+</html>

@@ -1,14 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
+{% load static %}
 <html lang="ko">
 <head>
- <meta charset="UTF-8">
- <title>회사소개</title>
-</head>
-<body>
-<nav>
-<a href="/company/">company info</a>
- <a href="/mysite/">product</a>
-</nav>
-<h1>회사소개 페이지입니다.</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+     <meta name="description" content="main-landing page" />
+     <meta name="author" content="" />
+     <title>A Company</title>
+     <!-- Favicon-->
+     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+     <!-- Core theme CSS (includes Bootstrap)-->
+     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <!-- components   -->
+<!--    <link rel="import" href="../components/navbar.html">-->
+ </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- navbar-->
+        {% include "../components/navbar.html" %}
+            <!-- Header-->
+            <header class="py-5">
+                <div class="container px-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-xxl-6">
+                            <div class="text-center my-5">
+                                <h1 class="fw-bolder mb-3">A Company</h1>
+                                <p class="lead fw-normal text-muted mb-4">학교교육 및 평생교육을 포함한 교육제도와 그 운영, 교육재정 및 교원의 지위에 관한 기본적인 사항은 법률로 정한다. 감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- About section one-->
+            <section class="py-5 bg-light" id="scroll-target">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">기업 가치</h2>
+                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About section two-->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">성장 &amp; 비전</h2>
+                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                            <h2 class="fw-bolder">수치/통계/연혁</h2>
+                            <p class="lead fw-normal text-muted mb-0">quibusdam expedita, maiores eaque quisquam.</p>
+                    </div>
+                </div>
+                <!-- Pricing card pro-->
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="card mb-5 mb-xl-0">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        Pro
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$9</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>5 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+            </section>
+        </main>
+<!--footer-->
+    {% include "../components/footer.html" %}
 </body>
 </html>
