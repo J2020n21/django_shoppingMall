@@ -4,4 +4,4 @@ def mainpage(req):
     return render(req, 'pages/mainpage.html')
 
 def company(req):
-    return render(req, '/pages/company_info.html')
+    return render(req, 'pages/company_info.html')
