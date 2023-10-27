@@ -1,25 +1,5 @@
-<!doctype html>
-{% load static %}
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-     <meta name="description" content="main-landing page" />
-     <meta name="author" content="" />
-     <title>Main</title>
-     <!-- Favicon-->
-     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-     <!-- Core theme CSS (includes Bootstrap)-->
-     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-    <!-- components   -->
-<!--    <link rel="import" href="../components/navbar.html">-->
- </head>
-   <body>
-        <!-- Responsive navbar-->
-
-        {% include "../components/navbar.html" %}
+{% extends '../components/base.html' %}
+{% block content %}
         <!-- Page Content-->
         <div class="container px-4 px-lg-5">
             <!-- Heading Row-->
@@ -29,8 +9,8 @@
                     <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/1200x800/dee2e6/6c757d.jpg" alt="..." /></div>
                     <div class="col-lg-5">
                         <h1 class="font-weight-light">{{content.title}}</h1>
-                        <p>{{content.content}}</p>
-                        <a class="btn btn-primary" href="/mysite/detail/">상품 살펴보기</a>
+                        <p>{{content.content | truncatewords:20}}</p>
+                        <a class="btn btn-primary" href="{% url 'detail' content.id %}">상품 살펴보기</a>
                     </div>
                         {% endfor %}
                     {% else %}
@@ -73,10 +53,5 @@
                     </div>
                 </div>
             </section>
+{% endblock %}
 
-        <!-- Footer-->
-        {% include "../components/footer.html" %}
-
-    </body>
-
-</html>

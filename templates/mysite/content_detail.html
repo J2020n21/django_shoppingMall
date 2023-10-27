@@ -1,32 +1,12 @@
-<!doctype html>
-{% load static %}
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-     <meta name="description" content="main-landing page" />
-     <meta name="author" content="" />
-     <title>Product Detail</title>
-     <!-- Favicon-->
-     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-     <!-- Core theme CSS (includes Bootstrap)-->
-     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-    <!-- components   -->
-<!--    <link rel="import" href="../components/navbar.html">-->
- </head>
-   <body>
-        <!-- Responsive navbar-->
-
-        {% include "../components/navbar.html" %}
+{% extends '../components/base.html' %}
+{% block content %}
         <!-- Page Content-->
                     <section class="py-5">
                 <div class="container px-5 my-5">
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-6">
                             <div class="text-center mb-5">
-                                <h1 class="fw-bolder">Project Title</h1>
+                                <h1 class="fw-bolder">{{content_list.title}}</h1>
                             </div>
                         </div>
                     </div>
@@ -36,6 +16,7 @@
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-6">
                             <div class="text-center mb-5">
+                                <p class="lead fw-normal text-muted">{{content_list.content}}</p>
                                 <p class="lead fw-normal text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt architecto enim eos accusantium fugit recusandae illo iste dignissimos possimus facere ducimus odit voluptatibus exercitationem, ex laudantium illum voluptatum corporis.</p>
                                 <a class="btn btn-primary" href="#!">구매하기</a>
                                 <a class="btn btn-primary" href="#!">장바구니</a>
@@ -47,9 +28,4 @@
                 </div>
             </section>
 
-        <!-- Footer-->
-        {% include "../components/footer.html" %}
-
-    </body>
-
-</html>
+{% endblock %}

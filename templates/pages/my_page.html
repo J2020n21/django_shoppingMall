@@ -1,25 +1,5 @@
-<!doctype html>
-{% load static %}
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-     <meta name="description" content="main-landing page" />
-     <meta name="author" content="" />
-     <title>My page</title>
-     <!-- Favicon-->
-     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-     <!-- Core theme CSS (includes Bootstrap)-->
-     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-    <!-- components   -->
-<!--    <link rel="import" href="../components/navbar.html">-->
- </head>
-   <body>
-        <!-- Responsive navbar-->
-
-        {% include "../components/navbar.html" %}
+{% extends '../components/base.html' %}
+{% block content %}
         <!-- Page Content-->
                         <div class="col-lg-12 col-xl-4">
                             <div class="card mt-3 mb-5 mb-xl-0">
@@ -55,9 +35,4 @@
                             </div>
                         </div>
 
-        <!-- Footer-->
-        {% include "../components/footer.html" %}
-
-    </body>
-
-</html>
+{% endblock %}

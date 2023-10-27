@@ -1,30 +1,7 @@
-<!doctype html>
-{% load static %}
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-     <meta name="description" content="main-landing page" />
-     <meta name="author" content="" />
-     <title>A Company</title>
-     <!-- Favicon-->
-     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-     <!-- Core theme CSS (includes Bootstrap)-->
-     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-    <!-- components   -->
-<!--    <link rel="import" href="../components/navbar.html">-->
- </head>
-<body>
-<!--navbar-->
-    {% include "../components/navbar.html" %}
+{% extends '../components/base.html' %}
+{% block content %}
 
 <h1>메인 페이지입니다.</h1>
 
 
-<!--footer-->
-    {% include "../components/footer.html" %}
-
-</body>
-</html>
+{% endblock %}>
